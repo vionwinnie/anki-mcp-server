@@ -40,13 +40,11 @@ Finally, use the `update_notes_with_sentences` tool to add these sentences to yo
 
 The sentences will be added to the reading field of each vocabulary card, providing more context for your studies.
 
-![Update cards](screenshots/verify_notes.png)
-
 ### Results in Anki
 
 After the update, your cards will include the new sample sentences:
+![Update cards](screenshots/verify_notes.png)
 
-![Anki result](screenshots/anki_result.png)
 
 This workflow helps you:
 1. Practice vocabulary in context through fill-in-the-blank exercises
