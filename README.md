@@ -1,6 +1,8 @@
-# Anki MCP Server
+# Japanese Vocab Anki MCP Server
 
 A Model Context Protocol server implementation for interacting with Anki decks programmatically. This server allows Language Models to interact with Anki through a standardized interface, with special support for Japanese language learning.
+
+This is vibe-coded with Cursor with Claude 3.5 Sonnet.
 
 ## Features
 
@@ -12,17 +14,51 @@ A Model Context Protocol server implementation for interacting with Anki decks p
 - Add sample sentences to Japanese vocabulary cards
 - Track review history and learning progress
 
+## End-to-End Example: Japanese Vocabulary Study with Claude
+
+Here's a complete workflow showing how to use Claude to enhance your Japanese vocabulary cards with sample sentences.
+
+### Step 1: Generate Fill-in-the-Blank Exercises
+
+First, ask Claude to create practice exercises using the `study_japanese_vocab_prompt`:
+
+![Fill in the blanks exercise](screenshots/fill_in_blanks.png)
+
+Claude will look through your recently reviewed vocabulary and create contextual sentences with blanks to test your understanding.
+
+### Step 2: Convert to Sample Sentences
+
+Next, use the `vocab_sentences_json_prompt` to convert these sentences into a structured format:
+
+Claude will transform the sentences into a JSON dictionary mapping each vocabulary word to its sample sentences.
+
+### Step 3: Update Anki Cards
+
+Finally, use the `update_notes_with_sentences` tool to add these sentences to your Anki cards:
+
+![Update cards](screenshots/update_cards.png)
+
+The sentences will be added to the reading field of each vocabulary card, providing more context for your studies.
+
+![Update cards](screenshots/verify_notes.png)
+
+### Results in Anki
+
+After the update, your cards will include the new sample sentences:
+
+![Anki result](screenshots/anki_result.png)
+
+This workflow helps you:
+1. Practice vocabulary in context through fill-in-the-blank exercises
+2. Add natural example sentences to your cards
+3. Build a more comprehensive understanding of each word's usage
+
 ## Installation
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/anki-mcp-server.git
-cd anki-mcp-server
-```
-
-2. Install dependencies:
-```bash
-pip install -e .
+git clone https://github.com/vionwinnie/jap-vocab-anki-mcp-server.git
+cd jap-vocab-anki-mcp-server
 ```
 
 ## Usage
