@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/vionwinnie-jap-vocab-anki-mcp-server-badge.png)](https://mseep.ai/app/vionwinnie-jap-vocab-anki-mcp-server)
+
 # Japanese Vocab Anki MCP Server
 
 A Model Context Protocol server implementation for interacting with Anki decks programmatically. This server allows Language Models to interact with Anki through a standardized interface, with special support for Japanese language learning.
